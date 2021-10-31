@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/*
+參考資料：
+https://muki.tw/tech/css-div-center/
+https://codepen.io/mukiwu/pen/Iuncz
+https://www.wibibi.com/info.php?tid=147
+https://smlpoints.com/notes-css-vertical-horizontal-align-method-collection.html
+*/
+
+/*
+Vertical & Horizontal center for div and text
+Autohr: Muki Wu
+Article: http://blog.mukispace.com/css-div-center
+*/
+/* basic layout start (you can skip it) */
+body {
+  background: rgb(235, 235, 235);
+  font-size: 1em;
+  color: #f0f0f0;
+  line-height: 1.5em;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+section {
+  background: #555;
+}
+
+h2 {
+  font-size: 2em;
+  background: #eadcff;
+  color: black;
+  padding: 0.2em 0;
+  margin: 0 1em;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.data-wrap {
+  padding: 1.5em;
+}
+
+.data-wrap img {
+  float: left;
+  margin-right: 0.8em;
+  -moz-border-radius: 1px 20px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px 20px;
+}
+
+/* center settings start */
+section {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  margin: 10px 0 0 -250px;
+  display: table;
+}
+
+section .text-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+section h2 {
+  text-align: center;
+}
+
+#display-box-id {
+  text-align: center;
+  width: 500px;
+  height: 200px;
+}
+
+#submit-buton-id {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #feffa5;
+  border: 1px solid #ffdb9a;
+  color: black;
+  font-size: 28px;
+  font-family: "微軟正黑體";
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit-buton-id:hover {
+  border-radius: 30px;
+  transition: 0.5s;
+  background-color: #c6fd92;
+}
