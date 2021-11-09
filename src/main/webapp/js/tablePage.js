@@ -25,25 +25,25 @@ sendDataButtonObj.addEventListener('click', function () {
     const dataArray = [];
 
     for (let i = 0, len = checkboxList.length; i < len; i++) {
-        var unitObject = {};
+        const unitObject = {};
 
         /* 抓出 tr DOM node */
-        var trObj = checkboxList[i].parentElement.parentElement;
+        const trObj = checkboxList[i].parentElement.parentElement;
 
         /* 抓出 tr 底下的 td DOM node [編號][id] */
-        var tdId = trObj.childNodes[3].textContent;
+        const tdId = trObj.childNodes[3].textContent;
 
         /* 抓出 tr 底下的 td DOM node [伺服器][serverName] */
-        var tdServerName = trObj.childNodes[5].childNodes[1].value;
+        const tdServerName = trObj.childNodes[5].childNodes[1].value;
 
         /* 抓出 tr 底下的 td DOM node [角色名稱][roleName] */
-        var tdRoleName = trObj.childNodes[7].childNodes[1].value;
+        const tdRoleName = trObj.childNodes[7].childNodes[1].value;
 
         /* 抓出 tr 底下的 td DOM node [Facebook名稱][facebookName] */
-        var tdFacebookName = trObj.childNodes[9].childNodes[1].value;
+        const tdFacebookName = trObj.childNodes[9].childNodes[1].value;
 
         /* 抓出 tr 底下的 td DOM node [等級][level] */
-        var tdLevel = trObj.childNodes[11].childNodes[1].value;
+        const tdLevel = trObj.childNodes[11].childNodes[1].value;
 
         unitObject.id = tdId;
         unitObject.serverName = tdServerName;
@@ -90,11 +90,9 @@ allCheckboxObj.addEventListener('click', function () {
     /* 把所有 checkbox 抓出來 */
     const checkboxList = document.querySelectorAll("#customer-table-id > tbody input[type=checkbox]");
 
-    let checkedFlag = null;
+    let checkedFlag = true;
 
-    if (allCheckboxObj.checked === true) {
-        checkedFlag = true;
-    } else {
+    if (allCheckboxObj.checked === false) {
         checkedFlag = false;
     }
 
